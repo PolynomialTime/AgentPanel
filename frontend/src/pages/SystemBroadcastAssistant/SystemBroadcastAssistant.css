@@ -1,0 +1,231 @@
+.broadcast-page {
+  min-height: 100vh;
+  padding: 36px 16px;
+  background: #ffffff;
+}
+
+.broadcast-card {
+  max-width: 840px;
+  margin: 0 auto;
+  border: 1px solid #111111;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 24px;
+}
+
+.broadcast-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.broadcast-back {
+  border: 0;
+  background: #ffffff;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.14s ease,
+    color 0.14s ease;
+}
+
+.broadcast-back:hover {
+  background: #ffffff;
+  color: #666666;
+}
+
+.broadcast-head h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #111111;
+  letter-spacing: -0.01em;
+}
+
+.broadcast-head p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #555555;
+}
+
+.broadcast-form {
+  display: grid;
+  gap: 14px;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.broadcast-form h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #111111;
+}
+
+.broadcast-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  color: #222222;
+  font-weight: 600;
+}
+
+.broadcast-form input,
+.broadcast-form textarea,
+.broadcast-form select {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background: #fafafa;
+  color: #111111;
+  font-size: 13px;
+  padding: 10px 11px;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.broadcast-form input:focus,
+.broadcast-form textarea:focus,
+.broadcast-form select:focus {
+  border-color: #111111;
+  background: #ffffff;
+  box-shadow: none;
+  outline: none;
+}
+
+.broadcast-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.broadcast-mode-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.broadcast-mode-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.broadcast-users-panel {
+  border: 0;
+  border-radius: 8px;
+  padding: 0;
+  background: #ffffff;
+}
+
+.broadcast-users-head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.broadcast-users-head input {
+  flex: 1;
+}
+
+.broadcast-users-head span {
+  font-size: 12px;
+  color: #444444;
+  white-space: nowrap;
+}
+
+.broadcast-users-list {
+  max-height: 260px;
+  overflow: auto;
+  display: grid;
+  gap: 4px;
+}
+
+.broadcast-user-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 6px 8px;
+  transition: background 0.14s ease;
+}
+
+.broadcast-user-item:hover {
+  background: #f0f0f0;
+}
+
+.broadcast-user-item em {
+  color: #555555;
+  font-size: 11px;
+  font-style: normal;
+}
+
+.broadcast-form button[type="submit"] {
+  border: 1px solid #111111;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: opacity 0.14s ease;
+}
+
+.broadcast-form button[type="submit"]:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.broadcast-form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.broadcast-error {
+  margin: 0;
+  font-size: 12px;
+  color: #111111;
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.broadcast-success {
+  margin: 0;
+  font-size: 12px;
+  color: #111111;
+  background: #f8f8f8;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.broadcast-identity {
+  margin: 0;
+  font-size: 12px;
+  color: #444444;
+  background: #f7f7f7;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+}

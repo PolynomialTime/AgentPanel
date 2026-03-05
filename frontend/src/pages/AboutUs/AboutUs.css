@@ -1,0 +1,398 @@
+/* ═══════════════════════════════════════════
+   AboutUs — compact, modern layout
+   ═══════════════════════════════════════════ */
+
+.about-page {
+  min-height: 100vh;
+  padding-top: 68px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(206, 232, 243, 0.9) 0px,
+      rgba(255, 255, 255, 0.92) 760px
+    ),
+    radial-gradient(
+      120% 90% at 15% 5%,
+      rgba(24, 24, 27, 0.06),
+      transparent 45%
+    ),
+    radial-gradient(
+      100% 70% at 95% 12%,
+      rgba(24, 24, 27, 0.05),
+      transparent 50%
+    ),
+    #f8fafc;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Shared container */
+.about-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Hero ── */
+.about-hero {
+  padding: 44px 24px 36px;
+  text-align: center;
+}
+.about-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.about-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #18181b;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+.about-hero-subtitle {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #3f3f46;
+  margin: 0 0 12px;
+}
+.about-hero-desc {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 14px;
+  color: #71717a;
+  line-height: 1.65;
+  margin: 0 0 6px;
+}
+.about-hero-desc:last-of-type {
+  margin-bottom: 18px;
+}
+
+/* ── Buttons ── */
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.about-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+.about-btn--star {
+  background: #18181b;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 18px;
+}
+.about-btn--lg {
+  font-size: 15px;
+  padding: 10px 24px;
+}
+
+/* ── Sections ── */
+.about-section {
+  padding: 20px 0 16px;
+}
+.about-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0 0 10px;
+}
+
+.about-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* ── Feature cards ── */
+.about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.about-card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  padding: 14px 16px;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.about-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.about-card-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.about-card-title {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0;
+}
+.about-card-desc {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 13px;
+  color: #71717a;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Audience ── */
+.about-audience-box {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.about-audience-item {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 14px;
+  color: #3f3f46;
+  line-height: 1.6;
+  margin: 0;
+  padding: 3px 0;
+}
+
+/* ── Roadmap ── */
+.about-roadmap-block {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.about-roadmap-lead {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 14px;
+  color: #3f3f46;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+.about-roadmap-sub {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 13px;
+  color: #52525b;
+  margin: 0 0 4px;
+}
+.about-roadmap-list {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0;
+}
+.about-roadmap-list li {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 13px;
+  color: #52525b;
+  line-height: 1.6;
+  padding: 2px 0 2px 14px;
+  position: relative;
+}
+.about-roadmap-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #52525b;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ── GitHub Open Source ── */
+.about-opensource-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 18px 20px 16px;
+}
+.about-opensource-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.about-opensource-header svg {
+  width: 22px;
+  height: 22px;
+}
+.about-opensource-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0;
+}
+.about-opensource-desc {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 13px;
+  color: #52525b;
+  line-height: 1.6;
+  margin: 0 0 6px;
+}
+.about-opensource-cta {
+  font-style: italic;
+  color: #71717a;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.about-opensource-list {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.about-opensource-list li {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 12px;
+  color: #3f3f46;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* ── Join us CTA cards ── */
+.about-cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.about-cta-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.about-cta-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.about-cta-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.about-cta-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.about-cta-text {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #18181b;
+  line-height: 1.4;
+}
+.about-cta-sub {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 11px;
+  color: #a1a1aa;
+  line-height: 1.3;
+}
+
+/* ── Contributors ── */
+.about-contrib-group {
+  margin-bottom: 8px;
+}
+.about-contrib-group:last-child {
+  margin-bottom: 0;
+}
+.about-contrib-label {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 2px;
+}
+.about-contrib-names {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 15px;
+  color: #3f3f46;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Sponsors / Acknowledgements ── */
+.about-sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.about-sponsor-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  padding: 10px 18px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.about-sponsor-item:hover {
+  background: #e4e4e7;
+}
+.about-sponsor-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.about-sponsor-name {
+  font-family: 'Exo 2', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #27272a;
+}
+
+/* ═══════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 36px 16px 28px;
+  }
+  .about-hero-title {
+    font-size: 1.8rem;
+  }
+  .about-card-grid,
+  .about-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .about-section-title {
+    font-size: 18px;
+  }
+  .about-opensource-card {
+    padding: 14px 16px;
+  }
+}

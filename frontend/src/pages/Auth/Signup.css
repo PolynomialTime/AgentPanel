@@ -1,0 +1,192 @@
+/* ── Signup: rounded, soft style overrides ── */
+
+.signup-page {
+  position: relative;
+}
+
+/* Card wrapper for transition positioning */
+.signup-card-wrap {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(12px) scale(0.97);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.signup-card-wrap.active {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.signup-card-wrap.exit {
+  opacity: 0;
+  transform: translateY(-12px) scale(0.97);
+}
+
+/* Wider card for role selection */
+.signup-card.auth-card {
+  max-width: 440px;
+}
+
+/* ── Role Selection Cards ── */
+
+.role-options {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.role-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px 24px;
+  background: #fafafa;
+  border: 1.5px solid #e4e4e7;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.role-card:hover {
+  border-color: #a1a1aa;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.role-card:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.role-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f4f4f5;
+  color: #3f3f46;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.role-card:hover .role-icon {
+  background: #18181b;
+  color: #fff;
+}
+
+.role-title {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #18181b;
+}
+
+.role-desc {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 12px;
+  color: #71717a;
+  line-height: 1.5;
+}
+
+/* ── Back button ── */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+  padding: 6px 12px 6px 8px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #71717a;
+  background: none;
+  border: 1px solid #e4e4e7;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.back-btn:hover {
+  color: #18181b;
+  border-color: #a1a1aa;
+  background: #f4f4f5;
+}
+
+/* ── Form header with role badge ── */
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.form-header h1 {
+  margin: 0;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #18181b;
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
+/* ── Language toggle ── */
+
+.signup-lang-toggle {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.signup-lang-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: 1px solid #e4e4e7;
+  background: none;
+  color: #71717a;
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.signup-lang-btn.is-active {
+  border-color: #18181b;
+  color: #18181b;
+  background: #f4f4f5;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 480px) {
+  .role-options {
+    flex-direction: column;
+  }
+
+  .signup-card.auth-card {
+    margin: 0 12px;
+    padding: 32px 24px;
+    border-radius: 14px;
+  }
+}

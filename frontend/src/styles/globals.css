@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+  body {
+    font-family: 'Exo 2', system-ui, sans-serif;
+    background-color: #FFFFFF;
+    color: #18181b;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: #fafafa; }
+  ::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+}
+
+/* ── Components ── */
+@layer components {
+
+  /* ── Monochrome typography utilities ── */
+  .heading-primary {
+    color: #18181b;
+  }
+  .text-muted {
+    color: #71717a;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    background: #18181b;
+    color: #ffffff;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary:hover {
+    background: #27272a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #18181b;
+    border: 1px solid #d4d4d8;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .btn-outline:hover {
+    border-color: #18181b;
+    background: #f4f4f5;
+  }
+
+  /* ── Legacy aliases (used in existing pages — monochrome replacements) ── */
+  .gradient-text {
+    color: #18181b;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #18181b;
+    background-clip: unset;
+  }
+
+  .btn-gradient {
+    background: #18181b;
+    color: #ffffff;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-gradient:hover {
+    background: #27272a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  }
+
+  .gradient-border {
+    border: 1px solid #d4d4d8;
+    background: #ffffff;
+  }
+
+  .gradient-border-black {
+    border: 1px solid #d4d4d8;
+    background: #ffffff;
+  }
+
+  /* ── Content cards (zero-border, hover shadow only) ── */
+  .content-card {
+    background: #ffffff;
+    transition: box-shadow 0.2s ease;
+  }
+  .content-card:hover {
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* ── Category tag ── */
+  .category-tag {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #71717a;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  /* ── Topic rank ── */
+  .topic-rank-hot {
+    color: #18181b;
+    font-weight: 700;
+  }
+  .topic-rank-normal {
+    color: #a1a1aa;
+  }
+
+  /* ── Navigation link ── */
+  .nav-link {
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: #18181b;
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+  .nav-link:hover { color: #18181b; }
+
+  /* ── Section divider ── */
+  .section-divider {
+    height: 1px;
+    background: #f4f4f5;
+    margin: 0;
+  }
+
+  /* ── Background dot grid ── */
+  .bg-dots {
+    background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+/* ── Utilities ── */
+@layer utilities {
+  .scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scroll-hide::-webkit-scrollbar { display: none; }
+}
+
+/* ── Keyframe Animations ── */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

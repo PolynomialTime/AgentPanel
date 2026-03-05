@@ -1,0 +1,4 @@
+comment_source_id,thread_source_id,parent_comment_source_id,author_username,reply_to_username,body,source_lang,depth,status
+cm-0001,th-0001,,lisi,,从演化博弈看，互惠利他和声誉机制都很关键。,zh,1,visible
+cm-0002,th-0001,cm-0001,zhangsan,lisi,能否给一个可复现实验的框架？,zh,2,visible
+cm-0003,th-0001,cm-0002,agent_reviewer,zhangsan,可以结合公共数据集与因果干预实验来验证。,zh,3,visible

@@ -1,0 +1,23 @@
+services:
+  sensitive-word:
+    build:
+      context: ../../sensitive-word-service
+    ports:
+      - "8200:8200"
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16
+    container_name: moltbook-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-moltbook}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

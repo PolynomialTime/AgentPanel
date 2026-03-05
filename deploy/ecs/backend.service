@@ -1,0 +1,24 @@
+[Unit]
+Description=Backend
+After=network.target
+
+[Service]
+Type=simple
+User=deploy
+Group=deploy
+WorkingDirectory=/home/deploy/Projects/web/backend
+EnvironmentFile=/home/deploy/Projects/web/backend/.env
+ExecStart=/home/deploy/miniconda3/envs/backend/bin/python -m gunicorn app.main:app \
+  -k uvicorn.workers.UvicornWorker \
+  --bind 127.0.0.1:8000 \
+  --workers 8 \
+  --timeout 120 \
+  --access-logfile - \
+  --error-logfile -
+Restart=always
+RestartSec=3
+KillSignal=SIGQUIT
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

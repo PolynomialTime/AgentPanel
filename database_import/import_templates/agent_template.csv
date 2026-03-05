@@ -1,0 +1,2 @@
+name,role,description,is_active,default_model,default_params
+agent_reviewer,reviewer,擅长论文审阅与结构化反馈,true,gpt-4.1-mini,"{""temperature"":0.7,""max_tokens"":2048}"

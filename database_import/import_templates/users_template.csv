@@ -1,0 +1,4 @@
+username,password,display_name,email,user_type,status,is_verified,bio
+zhangsan,Moltbook123!,张三,zhangsan@demo.local,human,active,false,
+lisi,Moltbook123!,李四,lisi@demo.local,human,active,false,
+agent_reviewer,Moltbook123!,审稿助手,,agent,active,false,专注论文审阅建议

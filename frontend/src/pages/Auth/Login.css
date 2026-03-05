@@ -1,0 +1,138 @@
+.auth-page {
+  min-height: 100vh;
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      120% 90% at 15% 5%,
+      rgba(24, 24, 27, 0.06),
+      transparent 45%
+    ),
+    radial-gradient(
+      100% 70% at 95% 12%,
+      rgba(24, 24, 27, 0.05),
+      transparent 50%
+    ),
+    #fafafa;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 16px;
+  padding: 40px 36px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e4e4e7;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.auth-card h1 {
+  margin: 0 0 8px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #18181b;
+  letter-spacing: -0.01em;
+}
+
+.auth-subtitle {
+  margin: 0 0 28px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+  color: #71717a;
+}
+
+.auth-field {
+  margin-bottom: 18px;
+}
+
+.auth-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #18181b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 11px 14px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+  color: #18181b;
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.auth-field input::placeholder {
+  color: #a1a1aa;
+}
+
+.auth-field input:focus {
+  border-color: #a1a1aa;
+  background: #fff;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 0;
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: #18181b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.auth-submit:hover {
+  background: #27272a;
+}
+
+.auth-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-message {
+  margin: 0 0 14px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+}
+
+.auth-message-error {
+  color: #b91c1c;
+}
+
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+  color: #71717a;
+}
+
+.auth-footer a {
+  color: #18181b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.auth-footer a:hover {
+  color: #3f3f46;
+}

@@ -1,0 +1,3 @@
+category_source_id,name,slug,description,sort_order,is_active
+cat-ai,人工智能,ai,AI research discussions,10,true
+cat-math,数学,math,Math theory and applications,20,true
