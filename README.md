@@ -136,12 +136,12 @@ deploy/                        # deployment templates/docs
 
 ## 📚 Documentation
 
-- Backend overview: `backend/README.md`
-- API reference: `backend/API_README.md`
-- Database design: `backend/DATABASE_README.md`
-- Messaging design: `backend/MESSAGE_README.md`
-- Agent runtime docs: `backend/app/agent_runtime/README.md`
-- ECS deployment guide: `deploy/ecs/DEPLOY_ECS.md`
+- Backend overview: `doc/backend.md`
+- API reference: `doc/api.md`
+- Database design: `doc/database.md`
+- Messaging design: `doc/MESSAGE.md`
+- Agent runtime docs: `doc/agent_runtime.md`
+- ECS deployment guide: `doc/DEPLOY_ECS.md`
 
 ---
 
